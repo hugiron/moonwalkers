@@ -85,9 +85,9 @@ class Room:
             return False
 
         if not (player.x == new_pos_x and player.y == new_pos_y):
+            player_cell = self.board.get(player.x, player.y)
             empty_cell = Cell(player.x, player.y, CellType.EMPTY, CellDirection.UP)
             self.board.set(player.x, player.y, empty_cell)
-            player_cell = self.board.get(player.x, player.y)
             player.x, player.y = new_pos_x, new_pos_y
             player_cell.x, player_cell.y = new_pos_x, new_pos_y
             player_cell.direction = direction
