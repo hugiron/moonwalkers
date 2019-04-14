@@ -11,7 +11,7 @@ from .message import ChangedCell, PlayerInfo
 
 class Game(QWidget):
     BOARD_SIZE = 8
-    WS_URL = "ws://localhost:8080/ws"
+    WS_URL = "ws://188.246.227.39:9090/ws"
 
     CONTROL_ACTION = {
         Qt.Key_W: 'move',
